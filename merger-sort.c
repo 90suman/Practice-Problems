@@ -17,31 +17,19 @@ void Merge (int arr[], int p, int q, int r)
 	for (i = 0;i<n2;i++)
 		rightArr[i] = arr[q+i+1];
 	rightArr[n2] = MAX;
-	printf("Left arr\n");	
-	for (i = 0;i<n1;i++)
-	{
-		printf("%d ",leftArr[i]);
-	}
-	printf("\n");	
-	printf("Right arr\n");	
-	for (i = 0;i<n2;i++)
-	{
-		printf("%d ",rightArr[i]);
-	}
-	printf("\n");	
 
 	i= 0,j = 0;	
 	for (k=p;k<r;k++)
 	{
-		if (leftArr[i] >= rightArr[j])
-		{
-			arr[k] = rightArr[j];
-			j++;
-		}
-		else  // either left is less or equal to right
+		if (rightArr[j] >= leftArr[i])
 		{
 			arr[k] = leftArr[i];
 			i++;
+		}
+		else  // either left is less or equal to right
+		{
+			arr[k] = rightArr[j];
+			j++;
 		}
 	}
 }
@@ -70,8 +58,7 @@ int main (void)
 		printf("%d ",arr[i]);
 	}
 	printf("\nAfter sorting\n");
-	//mergeSort(arr,0,5);
-	Merge(arr,0,3,7);
+	mergeSort(arr,0,size-1);
 	for (i = 0;i<size;i++)
 	{
 		printf("%d ",arr[i]);
