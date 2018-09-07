@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-/*Start from index 1, left side is already sorted, pick a element from right array sequentially,
+/*Start from index 1, left side is already sorted, pick an element from right array sequentially,
 compare with sorted list to find correction location for insertion*/
 void insertionSort(int arr[], int size)
 {
