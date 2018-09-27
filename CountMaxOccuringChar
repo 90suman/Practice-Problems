@@ -21,6 +21,32 @@ char getMaximumOccuringChar(char *str)
 	return result;
 }
 
+/*Using hashmap considering string is case insensitive*/
+
+char GetMaxChar(char *str)
+{
+        int i = 0,Hash[26] = {0};
+        while (str[i] != '\0')
+        {
+                if (65 <= (int)str[i] && (int)str[i] <=90)
+                        Hash[str[i]%65]++;
+                else
+                        Hash[str[i]%97]++;
+                i++;
+        }
+        int max = -1,val;
+        for (int i = 0;i <26;i++)
+        {
+                if (Hash[i] > max)
+                {
+                        max = Hash[i];
+                        val = 65 +i;
+                }
+        }
+        return (char)val;
+}
+
+
 int main()
 {
 	char str[] = "ravindra ravula";
