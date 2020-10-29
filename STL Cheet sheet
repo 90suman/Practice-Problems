@@ -1,0 +1,19 @@
+#include<array>
+
+std::array<T,n> arr.    ---> This is a container which encapsulates fixed size array, passed as argument. (Size is must)!!
+
+Implementation :  Type array[N]. ---> C type array 
+
+Note:
+ when passing std::array, it is pass by value, it is the object that is passed not the pointer to array (like in C).
+ If you want pass by reference , use &arr in receiving function .
+ 
+ 
+ 
+ Vector:
+ 
+ Note:
+ After declaring vector, do vec.reserve(<some size>). This will save some time, while dynamically increasing the sie of vector.
+ Ex:
+    std::vector<int> vec;
+    vec.reserve(1000);   
