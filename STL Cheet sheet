@@ -17,3 +17,29 @@ Note:
  Ex:
     std::vector<int> vec;
     vec.reserve(1000);   
+
+
+
+
+2. List. (std::list) ----> Implemented as doubly linked-list.
+
+
+std::list<int> mylist;
+
+mylist.push_back (100). ----> Adds a new element at the end of the list container,
+
+push_front --->.  Inserts a new element at the beginning of the list, right before its current first element.
+
+pop_back ---> Delete last element
+
+pop_front ---> Delete first element
+
+
+back ---> gets reference to last element
+front --> Returns a reference to the first element in the list container.
+
+clear  --->. Removes all elements from the list container  O(n).
+
+empty ----> Returns whether the list container is empty 
+
+size ---> Returns the number of elements in the list container.
